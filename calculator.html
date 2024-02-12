@@ -24,25 +24,41 @@
                 <a class="nav-link" href="calculator.html">Calculator</a>
               </li>
             </ul>
-        </nav>
-
-        <div class="container-fluid">
-        <div class="container-fluid" id="SuperCalculator" style="width:75%; height:75%;">
-          
-          <div class="row" style="padding:10px; width: 100%;">
-          <button onclick="DecreaseFirstNumber()" style="width:10%; border-radius: 20px;"> - </button>
-          <div id="numberone" style= "padding:8px;width: 10%; height: 40px; background-color: blueviolet; border-radius: 20px; text-align: center;"> Placeholder </div> 
-          <button onclick="IncreaseFirstNumber()" style="width:10%; border-radius: 20px;"> + </button>
-          <select class="form-select" id="mathSelect" style="width:10%;border-radius: 20px;">
-            <option selected value="+"> + </option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-          <button onclick="DecreaseSecondNumber()" style="width:10%;  border-radius: 20px; "> - </button>
-          <div id="numbertwo" style="padding:8px;width: 10%; height: 40px; background-color: red; border-radius: 20px; text-align: center;"> Placeholder </div>
-          <button onclick="IncreaseSecondNumber()" style="width:10%;  border-radius: 20px; "> + </button>
           </div>
+        </nav>
+      
+
+        
+        <div class="container-fluid mt-3" id="SuperCalculator">
+            
+          
+                <div class="row">
+                    <div class="col p-3" onclick="DecreaseFirstNumber()" style="width:10%; border-radius: 20px; display: block;text-align: center; background-color:beige ; color:black; font-size: 50px;"> - </div>
+                    <div class="col p-3" id="numberone" style="background-color: blueviolet; border-radius: 20px;display:block; font-size: 50px; text-align: center;"> Placeholder </div> 
+                    <div class="col p-3" onclick="IncreaseFirstNumber()" style="width:10%; border-radius: 20px; display: block;text-align: center; background-color:beige ; color:black; font-size: 50px;"> + </div>
+              
+                </div>
+
+          <div class="row">
+                    <div class="col p-3">CHOOSE TYPE OF CALCULATION ------------------------&gt</div>  
+                    <div class="col p-3 d-flex justify-content-center" id="SelectContainer" style="width:20%;" >
+                            <select class="form-select" id="mathSelect" style="width:10%;border-radius: 20px;">
+                            <option selected value="+"> + </option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                            </select>
+                      </div>
+                      <div class="col p-3"></div>
+
+          </div>
+          
+          <div class="row">
+            <div class="col p-3" onclick="DecreaseSecondNumber()" style="width:10%; border-radius: 20px; display: block;text-align: center; background-color:beige ; color:black; font-size: 50px;"> - </div>
+            <div class="col p-3" id="numbertwo" style="background-color: blueviolet; border-radius: 20px;display:block; font-size: 50px; text-align: center;"> Placeholder </div> 
+            <div class="col p-3" onclick="IncreaseSecondNumber()" style="width:10%; border-radius: 20px; display: block;text-align: center; background-color:beige ; color:black; font-size: 50px;"> + </div>
+          </div>
+        </div>
           <button id="SuperButton" onclick="CalculateStuff()" style="width:20%; border-radius: 20px;">Calculate</button>
           <div id="result/past stuff" class="justify-content-center">
           <div id="result" class="square" style="background-color: blue; width:20%"></div>
