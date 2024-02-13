@@ -1,3 +1,4 @@
+// Load 2 numbers when site loads
 window.onload = function RandomNumbers()
 {
     number1 = Math.floor(Math.random() * 10) + 1    
@@ -6,12 +7,13 @@ window.onload = function RandomNumbers()
     document.getElementById("numbertwo").innerHTML = number2;
 }
 
-
+//function to decrease first number and set it to div
 function DecreaseFirstNumber()
 {
     number1--
     document.getElementById("numberone").innerHTML = number1;
 }
+//function to increase first number and set it to div
 function IncreaseFirstNumber()
 {
     number1++
