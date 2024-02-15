@@ -7,16 +7,14 @@ let Status
 
 window.onload = function setImages()
 {
-    let ImageSlot = document.getElementById('SuperImage');
-    ImageSlot.src = myImages.images[i].Location;
-    ImageSlot.alt = myImages.images[i].ImageName;
+    document.getElementById('SuperImage').src = myImages.images[i].Location;
     document.getElementById('SuperText').innerHTML = "Image = " + myImages.images[0].ImageName + " by " +  myImages.images[0].Artist;
 }
 
 function RightButton()
 {
     $("#SuperImage").fadeOut("slow", function() {
-        let ImageSlot = document.getElementById('SuperImage');
+    let ImageSlot = document.getElementById('SuperImage');
     if (i < myImages.images.length){i++}
     if (i == myImages.images.length){i = 0}
     localStorage.setItem('latestIndex', i)
@@ -43,6 +41,7 @@ function LeftButton()
     let ImageSlot = document.getElementById('SuperImage');
     if (i == 0){i = myImages.images.length}
     if (i > 0){i--}
+    localStorage.setItem('latestIndex', i)
     ImageSlot.src = myImages.images[i].Location;
     ImageSlot.alt = myImages.images[i].ImageName;
     document.getElementById('SuperText').innerHTML = "Image = " + myImages.images[i].ImageName + " by " +  myImages.images[i].Artist;});
