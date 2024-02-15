@@ -15,8 +15,7 @@ window.onload = function RandomNumbers()
 //function to decrease first number and set it to div
 function DecreaseFirstNumber()
 {
-    number1--
-    document.getElementById("numberone").innerHTML = number1;
+    document.getElementById("numberone").innerHTML = --number1;
 }
 //function to increase first number and set it to div
 function IncreaseFirstNumber()
