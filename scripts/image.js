@@ -8,28 +8,21 @@ let Status
 window.onload = function setImages()
 {
     document.getElementById('SuperImage').src = myImages.images[i].Location;
-    document.getElementById('SuperText').innerHTML = "Image = " + myImages.images[0].ImageName + " by " +  myImages.images[0].Artist;
+    document.getElementById('SuperText').innerHTML = myImages.images[0].ImageName + " by " +  myImages.images[0].Artist;
+    Status = setInterval(RightButton, 2000)
 }
 
 function RightButton()
 {
     $("#SuperImage").fadeOut("slow", function() {
     let ImageSlot = document.getElementById('SuperImage');
-    if (i < myImages.images.length){i++}
-    if (i == myImages.images.length){i = 0}
+    if (i < myImages.images.length - 1){i++}
+    else if (i == myImages.images.length - 1){i = 0}
     localStorage.setItem('latestIndex', i)
     ImageSlot.src = myImages.images[i].Location;
     ImageSlot.alt = myImages.images[i].ImageName;
-    document.getElementById('SuperText').innerHTML = "Image = " + myImages.images[i].ImageName + " by " +  myImages.images[i].Artist;
+    document.getElementById('SuperText').innerHTML = myImages.images[i].ImageName + " by " +  myImages.images[i].Artist;
       });
-        
-    
-    /*let ImageSlot = document.getElementById('SuperImage');
-    if (i < myImages.images.length){i++}
-    if (i == myImages.images.length){i = 0}
-    ImageSlot.src = myImages.images[i].Location;
-    ImageSlot.alt = myImages.images[i].ImageName;
-    document.getElementById('SuperText').innerHTML = "Image = " + myImages.images[i].ImageName + " by " +  myImages.images[i].Artist;*/
     $( "#SuperImage" ).fadeIn( "slow", function() {
         
       });
@@ -39,12 +32,12 @@ function LeftButton()
 {
     $("#SuperImage").fadeOut("slow", function() {
     let ImageSlot = document.getElementById('SuperImage');
-    if (i == 0){i = myImages.images.length}
-    if (i > 0){i--}
+    if (i == 0){i = myImages.images.length - 1}
+    else if (i > 0){i--}
     localStorage.setItem('latestIndex', i)
     ImageSlot.src = myImages.images[i].Location;
     ImageSlot.alt = myImages.images[i].ImageName;
-    document.getElementById('SuperText').innerHTML = "Image = " + myImages.images[i].ImageName + " by " +  myImages.images[i].Artist;});
+    document.getElementById('SuperText').innerHTML = myImages.images[i].ImageName + " by " +  myImages.images[i].Artist;});
     $( "#SuperImage" ).fadeIn( "slow", function() {
         
     });
