@@ -32,3 +32,13 @@ function ChangeGreen()
     document.getElementById('DiceHere').src = 'Images/D20-green.png'
     localStorage.setItem('Dice', 'Images/D20-green.png')
 }
+function ChangeSilver()
+{
+    document.getElementById('DiceHere').src = 'Images/D20-silver.png'
+    localStorage.setItem('Dice', 'Images/D20-silver.png')
+}
+function ChangePink()
+{
+    document.getElementById('DiceHere').src = 'Images/D20-pink.png'
+    localStorage.setItem('Dice', 'Images/D20-pink.png')
+}
