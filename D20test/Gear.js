@@ -32,7 +32,7 @@
 
 
 
-    let = Armor = [
+    let Armor = [
         {
             "Class": "Heavy armor",
             "Resistance": 30,
@@ -62,7 +62,7 @@
         {
             "Class": "Amulet",
             "Resistance": 5,
-            "Crit%" : 25,
+            "CritChance" : 25,
             "Weight": 5,
             "Metal": "Yes",
             "Image": "Placeholder"
@@ -70,7 +70,7 @@
         {
             "Class": "Ring",
             "Resistance": 1,
-            "Crit%" : 5,
+            "CritChance" : 5,
             "Weight": 1,
             "Metal": "Yes",
             "Image": "Placeholder"
