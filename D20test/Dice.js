@@ -1,7 +1,7 @@
 //DO NOT EDIT!
 //fixed the roll
-
-let i = 720
+let number1;
+let i = 720;
 
 function ROLL()
 {
@@ -23,7 +23,7 @@ function ROLL()
         }  
       }
     );
-    setTimeout(() => { number1 = Math.floor(Math.random() * 20) + 1; }, 1000); 
+    /*setTimeout(() => {*/ number1 = Math.floor(Math.random() * 20) + 1; /*}, 1000);*/ 
     setTimeout(() => { document.getElementById('NumberHere').innerHTML = number1; }, 1000);
     setTimeout(() => { $("#NumberHere").fadeIn();}, 1300);
 };
