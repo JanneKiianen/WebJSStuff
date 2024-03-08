@@ -23,7 +23,15 @@ fetch('https://api.chucknorris.io/jokes/random')
 
 function RequestButton(){
 i++
-document.getElementById("accordionJokes").innerHTML += '<div class="accordion-item"> <p class="accordion-header" id="Fact' + i + '"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Fact ' + i + '</button></h2><div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"><div class="accordion-body"> <p id=JokeHere' + i +'><p> </div> </div> </div>'
+document.getElementById("accordionJokes").innerHTML += '<div class="accordion-item"> <h2 class="accordion-header">' + 
+                        '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' + i + 
+                        '" aria-expanded="false" aria-controls="collapse' + i + '"> Joke ' + i + 
+                        '</button></h2><div id="collapse' + i + 
+                        '" class="accordion-collapse collapse"' + 
+                        'data-bs-parent="#accordionJokes"><div class="accordion-body"> <p id=JokeHere' + i + 
+                        '><p> </div> </div> </div>'
+
+
 $.getJSON('https://api.chucknorris.io/jokes/random',
     function(result) {
         $("#JokeHere" + i).append(result.value + "<br>");
