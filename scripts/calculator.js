@@ -15,22 +15,29 @@ window.onload = function RandomNumbers()
 //function to decrease first number and set it to div
 function DecreaseFirstNumber()
 {
-    document.getElementById("numberone").innerHTML = --number1;
+    number1--
+    if (number1 < 1 ) {number1 = 1}
+    document.getElementById("numberone").innerHTML = number1;
 }
 //function to increase first number and set it to div
 function IncreaseFirstNumber()
 {
     number1++
+    if (number1 > 10) {number1 = 10}
     document.getElementById("numberone").innerHTML = number1;    
 }
 function DecreaseSecondNumber()
 {
     number2--
+    
+    if (number2 < 1 ) {number2 = 1}
     document.getElementById("numbertwo").innerHTML = number2;
 }
 function IncreaseSecondNumber()
 {
     number2++
+    
+    if (number2 > 10 ) {number2 = 10}
     document.getElementById("numbertwo").innerHTML = number2;
 }
 
